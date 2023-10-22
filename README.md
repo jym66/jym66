@@ -63,15 +63,3 @@ Feel free to check out my repositories and drop a star if you find something int
 </td></tr></table>  
 
 <br/>  
-
-  
-
-<br/>  
-
-![Profile views counter](https://komarev.com/ghpvc/?username=jym66&&style=flat-square)  
-  
-
-<br/>  
-
-
-<br />

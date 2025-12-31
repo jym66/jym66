@@ -21,9 +21,11 @@ jobs:
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           # 过滤列表 (已修正为全称)
-          plugin_languages_ignored: >-
-            html, css, tex, less, dockerfile, makefile,
-            c, c++, python, jupyter notebook
+          plugin_lines_skipped: >-
+            vendor, node_modules, target, dist, build,
+            *.pb.go, *.gen.go, *_test.go,
+            *.min.js, package-lock.json, yarn.lock, 
+            *.svg, *.json
           
           # --- 代码量统计 (LOC) ---
           plugin_lines: yes

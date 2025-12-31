@@ -30,7 +30,7 @@ jobs:
           
           # 性能兜底：限制扫描最近活跃的 30 个仓库
           plugin_lines_repositories_limit: 30
-          plugin_languages_ignored: c, cpp, makefile, h, hpp, python
+          plugin_languages_ignored: c, cpp, makefile, h, hpp, py
           # --- [可选推荐] 增加类似 GitHub 首页的“贡献日历” (可视化一年的提交) ---
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year # 显示完整的一年

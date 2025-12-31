@@ -14,23 +14,22 @@ jobs:
           
           # --- 基础配置 ---
           base: header, activity, community, repositories, metadata
-          # 仅统计作为 Owner 的仓库（包含私有），排除 Fork
           repositories_affiliations: owner
           repositories_forks: no
           
-          # --- 语言分布 (显示文件大小和百分比) ---
+          # --- 语言分布 ---
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
+          # 过滤列表 (已修正为全称)
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile,
+            c, c++, python, jupyter notebook
           
-          # --- [核心修改] 代码量统计 (Lines of Code) ---
+          # --- 代码量统计 (LOC) ---
           plugin_lines: yes
-          # 关键参数：设置为 1，代表只回溯最近 1 年的 Git Log
-          # 这样生成的 "Added" 和 "Removed" 数据就是这一年的产出
-          plugin_lines_history_limit: 1 
-          
-          # 性能兜底：限制扫描最近活跃的 30 个仓库
+          plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 30
-          plugin_languages_ignored: c, cpp, makefile, h, hpp, py
-          # --- [可选推荐] 增加类似 GitHub 首页的“贡献日历” (可视化一年的提交) ---
+          
+          # --- 贡献日历 (类似 GitHub 首页的小绿点) ---
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year # 显示完整的一年
+          plugin_isocalendar_duration: full-year
